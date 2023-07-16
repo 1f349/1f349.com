@@ -1,0 +1,38 @@
+:root {
+  color-scheme: light dark;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/Roboto-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/FiraCode-Regular.woff2') format('woff2');
+}
+
+body {
+  margin-top: 5em;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-family: 'Roboto';
+}
+
+main {
+  width: 90%;
+}
+
+code pre {
+  font-family: 'Fira Code', monospace;
+  font-size: 90%;
+}
+
+a {
+  color: tomato;
+}

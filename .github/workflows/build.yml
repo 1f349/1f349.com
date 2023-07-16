@@ -1,0 +1,17 @@
+name: Build/release
+
+on: push
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v1
+
+      - name: Archive
+        run: tar -czvf upload.tar.gz -C . *
+
+      - name: Release
+        run: 'curl -X POST -H "Authorization: Bearer ${{ secrets.DEPLOY }}" -F "upload=@upload.tar.gz" "https://sites.1f349.net/u?site=1f349.net&branch=${{ github.ref_name }}"'
