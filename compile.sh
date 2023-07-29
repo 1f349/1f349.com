@@ -3,7 +3,9 @@ function mp() {
   echo "  <meta property=\"$1\" content=\"$2\">"
 }
 
-rm -rf "build/"
+rm -rf build/
+mkdir build/
+cp -r assets/ build/assets/
 find . -name '*.page' -print0 |
   while IFS= read -r -d '' ff; do
     d=`dirname "$ff"`
