@@ -10,7 +10,7 @@ jobs:
       - name: Check out Git repository
         uses: actions/checkout@v1
 
-      - run: wget 'https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64' -O /usr/bin/yq
+      - run: sudo wget 'https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64' -O /usr/bin/yq
 
       - name: Build
         run: ./compile.sh
