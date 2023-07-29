@@ -10,8 +10,7 @@ jobs:
       - name: Check out Git repository
         uses: actions/checkout@v1
 
-      - run: sudo apt-get update
-      - run: sudo apt-get install yq
+      - run: wget 'https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64' -O /usr/bin/yq
 
       - name: Build
         run: ./compile.sh
