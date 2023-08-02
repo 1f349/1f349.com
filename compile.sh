@@ -5,7 +5,7 @@ function mp() {
 
 rm -rf build/
 mkdir build/
-cp -r assets/ build/assets/
+cp -r public/* build/
 find . -name '*.page' -print0 |
   while IFS= read -r -d '' ff; do
     d=`dirname "$ff"`

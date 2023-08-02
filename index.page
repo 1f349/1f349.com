@@ -8,8 +8,8 @@ meta:
   og-site_name: "1f349.net"
 content: |
   <main>
-    <code><pre>U+1F349: WATERMELON
-  Miscellaneous Symbols and Pictographs, U+1F300 - U+1F5FF
-  Supplementary Multilingual Plane, U+10000 - U+1FFFF</pre></code>
+    <code><pre class="pre-line">U+1F349: WATERMELON</pre></code>
+    <code><pre class="pre-line">Miscellaneous Symbols and Pictographs, U+1F300 - U+1F5FF</pre></code>
+    <code><pre class="pre-line">Supplementary Multilingual Plane, U+10000 - U+1FFFF</pre></code>
     <p>The internal domain for all Melon-hosted services.</p>
   </main>
