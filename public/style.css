@@ -40,13 +40,18 @@ main {
   }
 }
 
-code pre {
+code.utf-desc {
   font-family: 'Fira Code', monospace;
-  font-size: 90%;
+  font-size: 14.4px;
+  background-color: #121212;
+  padding: 1em;
+  display: block;
+  border-radius: 8px;
 }
 
-code pre.pre-line {
+code.utf-desc pre {
   white-space: pre-line;
+  margin-block: 5px;
 }
 
 a {
