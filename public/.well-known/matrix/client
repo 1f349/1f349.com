@@ -1,0 +1,5 @@
+{
+  "m.homeserver": {
+    "base_url": "https://synapse.1f349.net"
+  }
+}
