@@ -19,4 +19,4 @@ jobs:
         run: tar -czvf upload.tar.gz -C ./build .
 
       - name: Release
-        run: 'curl -X POST -H "Authorization: Bearer ${{ secrets.DEPLOY }}" -F "upload=@upload.tar.gz" "https://sites.1f349.com/u?site=1f349.com&branch=${{ github.ref_name }}"'
+        run: 'curl --fail -X POST -H "Authorization: Bearer ${{ secrets.DEPLOY }}" -F "upload=@upload.tar.gz" "https://sites.1f349.com/u?site=1f349.com&branch=${{ github.ref_name }}"'
