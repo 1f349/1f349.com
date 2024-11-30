@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Base.astro';
+import { Image } from "astro:assets";
+---
+
+<Layout
+	title="1f349.com"
+	description="U+1F349: WATERMELON"
+>
+    <h1 class="homepage-title"><Image width="50" height="50" alt="" src="/favicon.png"/> 1f349.com</h1>
+    <code>
+        <pre>U+1F349: WATERMELON</pre>
+        <pre>Miscellaneous Symbols and Pictographs, U+1F300 - U+1F5FF</pre>
+        <pre>Supplementary Multilingual Plane, U+10000 - U+1FFFF</pre>
+    </code>
+    <p>The internal domain for all Melon-hosted services.</p>
+</Layout>
+
+<style>
+    .homepage-title {
+        display: flex;
+        gap: 0.45em;
+        margin-bottom: 0.8em;
+    }
+
+    code {
+        font-family: 'Fira Code', monospace;
+        font-size: 0.8em;
+        padding: 1em;
+        display: block;
+        border-radius: 8px;
+    }
+
+    code pre {
+        white-space: pre-line;
+        margin-block: 5px;
+        padding: 0;
+    }
+</style>

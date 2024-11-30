@@ -1,0 +1,19 @@
+---
+import SocialLinks from "./SocialLinks.astro";
+const today = new Date();
+---
+
+<footer>
+    <div class="copyright">&copy; {today.getFullYear()} 1f349. All rights reserved.</div>
+    <SocialLinks/>
+</footer>
+<style>
+    footer {
+        padding: 2em 1em 6em 1em;
+        text-align: center;
+    }
+
+    .copyright {
+        margin-bottom: 2em;
+    }
+</style>
