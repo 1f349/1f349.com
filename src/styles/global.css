@@ -1,0 +1,170 @@
+:root {
+    color-scheme: light dark;
+
+    --text-color: #e8e6e3;
+    --accent: #df5555;
+    --accent-dark: #0e0f0f;
+    --code-block-background: var(--accent-dark);
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/Ubuntu.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Fira Code';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/FiraCode-Regular.woff2') format('woff2');
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    background: #181a1b;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    color: var(--text-color);
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+main {
+    width: 720px;
+    max-width: calc(100% - 2em);
+    margin: auto;
+    padding: 3em 1em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 0.5rem 0;
+    color: var(--text-color);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.052em;
+}
+
+h2 {
+    font-size: 1.441em;
+}
+
+h3 {
+    font-size: 0.953em;
+}
+
+h4 {
+    font-size: 0.563em;
+}
+
+h5 {
+    font-size: 0.25em;
+}
+
+strong,
+b {
+    font-weight: 700;
+}
+
+a {
+    color: var(--accent);
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+.prose p {
+    margin-bottom: 2em;
+}
+
+textarea {
+    width: 100%;
+    font-size: 16px;
+}
+
+input {
+    font-size: 16px;
+}
+
+table {
+    width: 100%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+code {
+    padding: 2px 5px;
+    background-color: var(--code-block-background);
+    border-radius: 2px;
+}
+
+pre {
+    padding: 1.5em;
+    border-radius: 8px;
+}
+
+pre > code {
+    all: unset;
+}
+
+blockquote {
+    border-left: 4px solid var(--accent);
+    padding: 0 0 0 20px;
+    margin: 0;
+    font-size: 1.333em;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid lightgrey;
+}
+
+@media (max-width: 720px) {
+    body {
+        font-size: 18px;
+    }
+
+    main {
+        padding: 1em;
+    }
+}
+
+.sr-only {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    /* IE6, IE7 - a 0 height clip, off to the bottom right of the visible 1px box */
+    clip: rect(1px 1px 1px 1px);
+    /* maybe deprecated but we need to support legacy browsers */
+    clip: rect(1px, 1px, 1px, 1px);
+    /* modern browsers, clip-path works inwards from each corner */
+    clip-path: inset(50%);
+    /* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
+    white-space: nowrap;
+}
