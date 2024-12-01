@@ -10,13 +10,11 @@ jobs:
       - name: Check out Git repository
         uses: actions/checkout@v1
 
-      - run: sudo wget 'https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64' -O /usr/bin/yq
-
       - name: Build
-        run: ./compile.sh
+        run: yarn && yarn build
 
       - name: Archive
-        run: tar -czvf upload.tar.gz -C ./build .
+        run: tar -czvf upload.tar.gz -C ./dist .
 
       - name: Release
         run: 'curl --fail -X POST -H "Authorization: Bearer ${{ secrets.DEPLOY }}" -F "upload=@upload.tar.gz" "https://sites.1f349.com/u?site=1f349.com&branch=${{ github.ref_name }}"'
