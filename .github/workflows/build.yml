@@ -8,10 +8,20 @@ jobs:
 
     steps:
       - name: Check out Git repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+          cache: yarn
+          cache-dependency-path: yarn.lock
 
       - name: Build
-        run: yarn && yarn build
+        run: yarn install && yarn build
 
       - name: Archive
         run: tar -czvf upload.tar.gz -C ./dist .
